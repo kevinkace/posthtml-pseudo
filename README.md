@@ -2,12 +2,35 @@
 
 # WORK IN PROGRESS - HOW DID YOU EVEN FIND THIS YOU CREEPER??
 
-This [PostHTML](https://github.com/posthtml/posthtml) plugin adds class names to elements for [pseudo classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes), eg `:first-child`/`:last-child`.
-Any pseudo class names dependent on inputs values (`:valid`, `:invalid`, ...), browsery history (`:visted`, `:link`, ...), interaction (`:hover`, `:focus:`), or parameters (`:nth-child()`, `:lang()`, ...) have been excluded.
+This [PostHTML](https://github.com/posthtml/posthtml) plugin adds class names to elements within `<body>` for [pseudo classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes), eg `:first-child`/`:last-child`.
+
+Before:
+```html
+<html>
+    <body>
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+    </body>
+</html>
+```
+
+After:
+```html
+<html>
+    <body>
+        <div class="first-child">one</div>
+        <div>two</div>
+        <div class="last-child">three</div>
+    </body>
+</html>
+```
+
+Pseudo classes dependent on input values (`:valid`, `:invalid`, ...), browser history (`:visted`, `:link`, ...), interaction (`:hover`, `:focus:`), or parameters (`:nth-child()`, `:lang()`, ...) have been excluded.
 
 ## Options
 
-Options object has two properties &mdash; `include` and `exclude`&mdash; to define which psuedo class names to add. Both `include` and `exclude` can be:
+Options config has two properties &mdash; `include` and `exclude` &mdash; to define which psuedo class names to add. Both `include` and `exclude` can be:
 
 - a string of a class name group
 - a string of a class name (/^:\S+/, from those in the "all" group)
@@ -16,9 +39,9 @@ Options object has two properties &mdash; `include` and `exclude`&mdash; to defi
 ### Example Options Config
 
 ```js
-var options = {
-    include : "all", // default is "all"
-    exclude : [      // default is null
+var config = {
+    include : "all", // default is [ "all" ]
+    exclude : [      // default is []
         "onlyChild",
         ":root",
         ":read-only"
