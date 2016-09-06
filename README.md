@@ -120,9 +120,9 @@ Those struck out are not to be implemented. Checkboxes track implementation stat
 - ~~`:nth-last-child()`~~ *
 - ~~`:nth-last-of-type()`~~ *
 - ~~`:nth-of-type()`~~ *
-- [ ] `:only-of-type`
-- [ ] `:only-child`
-- [ ] `:optional`
+- [X] `:only-of-type`
+- [X] `:only-child`
+- [X] `:optional`
 - ~~`:out-of-range`~~
 - [ ] `:read-only`
 - [ ] `:read-write`
