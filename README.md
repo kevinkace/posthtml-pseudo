@@ -2,8 +2,6 @@
 
 [![Build][build]][build-badge]
 
-# WORK IN PROGRESS - HOW DID YOU EVEN FIND THIS YOU CREEPER??
-
 This [PostHTML](https://github.com/posthtml/posthtml) plugin adds class names to elements within `<body>` for [pseudo classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes), eg `:first-child`/`:last-child`.
 
 Before:
