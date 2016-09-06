@@ -97,5 +97,15 @@ describe("/lib", () => {
                     assert.equal(result.html, fixtures.classNames[":last-of-type"].expected);
                 })
         );
+
+        // :only-child
+        it("should add only-child", () =>
+            posthtml()
+                .use(pseudo({ include : ":only-child" }))
+                .process(fixtures.classNames[":only-child"].input)
+                .then((result) => {
+                    assert.equal(result.html, fixtures.classNames[":only-child"].expected);
+                })
+        );
     });
 });

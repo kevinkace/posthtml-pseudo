@@ -39,15 +39,15 @@ module.exports = {
         ":last-of-type" : {
             input    : require("./fixtures/classNames/last-of-type.html"),
             expected : require("./fixtures/classNames/last-of-type.expected.html")
+        },
+        ":only-child" : {
+            input    : require("./fixtures/classNames/only-child.html"),
+            expected : require("./fixtures/classNames/only-child.expected.html")
         }
         // ,
         // ":only-of-type" : {
         //     input    : require("./fixtures/classNames/only-of-type.html"),
         //     expected : require("./fixtures/classNames/only-of-type.expected.html")
-        // },
-        // ":only-child" : {
-        //     input    : require("./fixtures/classNames/only-child.html"),
-        //     expected : require("./fixtures/classNames/only-child.expected.html")
         // },
         // ":optional" : {
         //     input    : require("./fixtures/classNames/optional.html"),
