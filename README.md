@@ -124,10 +124,10 @@ Those struck out are not to be implemented. Checkboxes track implementation stat
 - [X] `:only-child`
 - [X] `:optional`
 - ~~`:out-of-range`~~
-- [ ] `:read-only`
-- [ ] `:read-write`
-- [ ] `:required`
-- [ ] `:root`
+- [X] `:read-only`
+- [X] `:read-write`
+- [X] `:required`
+- [X] `:root`
 - ~~`:target`~~
 - ~~`:valid`~~
 - ~~`:visited`~~
