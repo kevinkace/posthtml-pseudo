@@ -107,5 +107,15 @@ describe("/lib", () => {
                     assert.equal(result.html, fixtures.classNames[":only-child"].expected);
                 })
         );
+
+        // :only-of-type
+        it("should add only-of-type", () =>
+            posthtml()
+                .use(pseudo({ include : ":only-of-type" }))
+                .process(fixtures.classNames[":only-of-type"].input)
+                .then((result) => {
+                    assert.equal(result.html, fixtures.classNames[":only-of-type"].expected);
+                })
+        );
     });
 });
