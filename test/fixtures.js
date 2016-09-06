@@ -63,10 +63,10 @@ module.exports = {
         ":required" : {
             input    : require("./fixtures/classNames/required.html"),
             expected : require("./fixtures/classNames/required.expected.html")
+        },
+        ":root" : {
+            input    : require("./fixtures/classNames/root.html"),
+            expected : require("./fixtures/classNames/root.expected.html")
         }
-        // ":root" : {
-        //     input    : require("./fixtures/classNames/root.html"),
-        //     expected : require("./fixtures/classNames/root.expected.html")
-        // }
     }
 };

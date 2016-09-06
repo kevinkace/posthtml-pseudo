@@ -157,5 +157,15 @@ describe("/lib", () => {
                     assert.equal(result.html, fixtures.classNames[":required"].expected);
                 })
         );
+
+        // :root
+        it("should add root", () =>
+            posthtml()
+                .use(pseudo({ include : ":root" }))
+                .process(fixtures.classNames[":root"].input)
+                .then((result) => {
+                    assert.equal(result.html, fixtures.classNames[":root"].expected);
+                })
+        );
     });
 });
