@@ -1,5 +1,7 @@
 # posthtml-pseudo
 
+[![Build][build]][build-badge]
+
 # WORK IN PROGRESS - HOW DID YOU EVEN FIND THIS YOU CREEPER??
 
 This [PostHTML](https://github.com/posthtml/posthtml) plugin adds class names to elements within `<body>` for [pseudo classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes), eg `:first-child`/`:last-child`.
@@ -133,3 +135,6 @@ Those struck out are not to be implemented. Checkboxes track implementation stat
 - ~~`:visited`~~
 
 \* Hope to add these, but require some thinking due to input parameters.
+
+[build]: https://travis-ci.org/kevinkace/posthtml-pseudo.svg?branch=master
+[build-badge]: https://travis-ci.org/kevinkace/posthtml-pseudo
