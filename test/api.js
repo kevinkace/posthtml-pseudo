@@ -5,9 +5,7 @@ const assert = require("assert"),
     posthtml = require("posthtml"),
     pseudo   = require("../index"),
 
-    fixtures = require("./fixtures"),
-
-    groups = require("../lib/groups");
+    fixtures = require("./fixtures");
 
 describe("/lib", () => {
     describe("/api.js", () => {
