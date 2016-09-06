@@ -137,5 +137,15 @@ describe("/lib", () => {
                     assert.equal(result.html, fixtures.classNames[":read-only"].expected);
                 })
         );
+
+        // :read-write
+        it("should add read-write", () =>
+            posthtml()
+                .use(pseudo({ include : ":read-write" }))
+                .process(fixtures.classNames[":read-write"].input)
+                .then((result) => {
+                    assert.equal(result.html, fixtures.classNames[":read-write"].expected);
+                })
+        );
     });
 });

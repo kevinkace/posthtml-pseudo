@@ -55,12 +55,12 @@ module.exports = {
         ":read-only" : {
             input    : require("./fixtures/classNames/read-only.html"),
             expected : require("./fixtures/classNames/read-only.expected.html")
+        },
+        ":read-write" : {
+            input    : require("./fixtures/classNames/read-write.html"),
+            expected : require("./fixtures/classNames/read-write.expected.html")
         }
         // ,
-        // ":read-write" : {
-        //     input    : require("./fixtures/classNames/read-write.html"),
-        //     expected : require("./fixtures/classNames/read-write.expected.html")
-        // },
         // ":required" : {
         //     input    : require("./fixtures/classNames/required.html"),
         //     expected : require("./fixtures/classNames/required.expected.html")
