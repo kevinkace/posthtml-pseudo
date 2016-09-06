@@ -59,12 +59,11 @@ module.exports = {
         ":read-write" : {
             input    : require("./fixtures/classNames/read-write.html"),
             expected : require("./fixtures/classNames/read-write.expected.html")
+        },
+        ":required" : {
+            input    : require("./fixtures/classNames/required.html"),
+            expected : require("./fixtures/classNames/required.expected.html")
         }
-        // ,
-        // ":required" : {
-        //     input    : require("./fixtures/classNames/required.html"),
-        //     expected : require("./fixtures/classNames/required.expected.html")
-        // },
         // ":root" : {
         //     input    : require("./fixtures/classNames/root.html"),
         //     expected : require("./fixtures/classNames/root.expected.html")

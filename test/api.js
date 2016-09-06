@@ -147,5 +147,15 @@ describe("/lib", () => {
                     assert.equal(result.html, fixtures.classNames[":read-write"].expected);
                 })
         );
+
+        // :required
+        it("should add required", () =>
+            posthtml()
+                .use(pseudo({ include : ":required" }))
+                .process(fixtures.classNames[":required"].input)
+                .then((result) => {
+                    assert.equal(result.html, fixtures.classNames[":required"].expected);
+                })
+        );
     });
 });
