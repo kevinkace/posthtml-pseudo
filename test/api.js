@@ -117,5 +117,15 @@ describe("/lib", () => {
                     assert.equal(result.html, fixtures.classNames[":only-of-type"].expected);
                 })
         );
+
+        // :optional
+        it("should add optional", () =>
+            posthtml()
+                .use(pseudo({ include : ":optional" }))
+                .process(fixtures.classNames[":optional"].input)
+                .then((result) => {
+                    assert.equal(result.html, fixtures.classNames[":optional"].expected);
+                })
+        );
     });
 });

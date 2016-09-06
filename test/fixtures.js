@@ -47,12 +47,12 @@ module.exports = {
         ":only-of-type" : {
             input    : require("./fixtures/classNames/only-of-type.html"),
             expected : require("./fixtures/classNames/only-of-type.expected.html")
+        },
+        ":optional" : {
+            input    : require("./fixtures/classNames/optional.html"),
+            expected : require("./fixtures/classNames/optional.expected.html")
         }
         // ,
-        // ":optional" : {
-        //     input    : require("./fixtures/classNames/optional.html"),
-        //     expected : require("./fixtures/classNames/optional.expected.html")
-        // },
         // ":read-only" : {
         //     input    : require("./fixtures/classNames/read-only.html"),
         //     expected : require("./fixtures/classNames/read-only.expected.html")
