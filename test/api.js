@@ -127,5 +127,15 @@ describe("/lib", () => {
                     assert.equal(result.html, fixtures.classNames[":optional"].expected);
                 })
         );
+
+        // :read-only
+        it("should add read-only", () =>
+            posthtml()
+                .use(pseudo({ include : ":read-only" }))
+                .process(fixtures.classNames[":read-only"].input)
+                .then((result) => {
+                    assert.equal(result.html, fixtures.classNames[":read-only"].expected);
+                })
+        );
     });
 });

@@ -51,12 +51,12 @@ module.exports = {
         ":optional" : {
             input    : require("./fixtures/classNames/optional.html"),
             expected : require("./fixtures/classNames/optional.expected.html")
+        },
+        ":read-only" : {
+            input    : require("./fixtures/classNames/read-only.html"),
+            expected : require("./fixtures/classNames/read-only.expected.html")
         }
         // ,
-        // ":read-only" : {
-        //     input    : require("./fixtures/classNames/read-only.html"),
-        //     expected : require("./fixtures/classNames/read-only.expected.html")
-        // },
         // ":read-write" : {
         //     input    : require("./fixtures/classNames/read-write.html"),
         //     expected : require("./fixtures/classNames/read-write.expected.html")
