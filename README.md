@@ -18,10 +18,10 @@ Before:
 After:
 ```html
 <html>
-    <body>
-        <div class="first-child">one</div>
+    <body class=":first-child :last-child">
+        <div class=":first-child">one</div>
         <div>two</div>
-        <div class="last-child">three</div>
+        <div class=":last-child">three</div>
     </body>
 </html>
 ```
@@ -33,7 +33,7 @@ Pseudo classes dependent on input values (`:valid`, `:invalid`, ...), browser hi
 Options config has two properties &mdash; `include` and `exclude` &mdash; to define which psuedo class names to add. Both `include` and `exclude` can be:
 
 - a string of a class name group
-- a string of a class name (/^:\S+/, from those in the "all" group)
+- a string of a class name (`/^:\S+/`, from those in the `all` group)
 - an array of class name groups and/or class names
 
 ### Example Options Config
@@ -98,36 +98,36 @@ var config = {
 
 ## Pseudo Class Names
 
-Those not struck out are implemented.
+Those struck out are not to be implemented. Checkboxes track implementation status.
 
 - ~~`:active`~~
 - ~~`:checked`~~
-- `:disabled`
-- `:empty`
-- `:enabled`
-- `:first-child`
-- `:first-of-type`
+- [X] `:disabled`
+- [X] `:empty`
+- [X] `:enabled`
+- [X] `:first-child`
+- [X] `:first-of-type`
 - ~~`:focus`~~
 - ~~`:hover`~~
 - ~~`:in-range`~~
 - ~~`:invalid`~~
 - ~~`:lang()`~~ *
-- `:last-child`
-- `:last-of-type`
+- [X] `:last-child`
+- [X] `:last-of-type`
 - ~~`:link`~~
 - ~~`:not()`~~ *
 - ~~`:nth-child()`~~ *
 - ~~`:nth-last-child()`~~ *
 - ~~`:nth-last-of-type()`~~ *
 - ~~`:nth-of-type()`~~ *
-- `:only-of-type`
-- `:only-child`
-- `:optional`
+- [ ] `:only-of-type`
+- [ ] `:only-child`
+- [ ] `:optional`
 - ~~`:out-of-range`~~
-- `:read-only`
-- `:read-write`
-- `:required`
-- `:root`
+- [ ] `:read-only`
+- [ ] `:read-write`
+- [ ] `:required`
+- [ ] `:root`
 - ~~`:target`~~
 - ~~`:valid`~~
 - ~~`:visited`~~
