@@ -30,8 +30,7 @@
   "main": "lib",
   "repository": "kevinkace/posthtml-pseudo",
   "scripts": {
-    "test": "npm run lint",
-    "lint": "eslint .",
-    "mocha": "mocha"
+    "test": "npm run lint && mocha",
+    "lint": "eslint ."
   }
 }
