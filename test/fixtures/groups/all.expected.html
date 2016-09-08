@@ -4,47 +4,47 @@
     <title>page title</title>
 </head>
 <body>
-    <h1 class=":first-child :last-of-type :only-of-type">header</h1>
+    <h1 class=":first-child :first-of-type :last-of-type :only-of-type">header</h1>
     <form action="#" class=":first-of-type :last-of-type :only-of-type">
-        <input type="text" placeholder="Name" disabled="" class=":disabled :empty :first-child :optional :read-write">
+        <input type="text" placeholder="Name" disabled="" class=":disabled :empty :first-child :first-of-type :optional :read-write">
         <input type="text" placeholder="Address" readonly="" class=":empty :enabled :optional :read-only">
         <input class="zipcode :disabled :empty :read-write :required" type="text" placeholder="Zip Code" disabled="" required="">
 
         <input class="submit :empty :enabled :last-of-type :optional :read-only" type="submit" name="" value="submit" readonly="readonly">
 
         <select readonly="" class=":enabled :first-of-type :last-of-type :only-of-type :optional :read-only">
-            <option class="first-child">option 1</option>
-            <option>option 2</option>
-            <option>option 3</option>
+            <option class=":enabled :first-child :first-of-type">option 1</option>
+            <option class=":enabled">option 2</option>
+            <option class=":enabled :last-child :last-of-type">option 3</option>
         </select>
 
         <textarea class=":empty :enabled :first-of-type :last-of-type :only-of-type :optional :read-write"></textarea>
 
-        <button type="button" class=":enabled :first-of-type :last-child :last-of-type :only-of-type">Button</button>
+        <button type="button" class=":enabled :first-of-type :last-child :last-of-type :only-of-type :optional">Button</button>
     </form>
 
     <div class=":first-of-type">
         outer
-        <div class=":first-child :last-child :last-of-type :only-child">Inner</div>
+        <div class=":first-child :first-of-type :last-child :last-of-type :only-child :only-of-type">Inner</div>
     </div>
 
     <div class=":empty :last-of-type"></div>
 
-    <button type="button" disabled="" class=":disabled :first-of-type :last-of-type">Button 2</button>
+    <button type="button" disabled="" class=":disabled :first-of-type :last-of-type :only-of-type :optional">Button 2</button>
 
-    <ul class=":first-of-type :last-of-type">
+    <ul class=":first-of-type :last-of-type :only-of-type">
         <li class=":first-child :first-of-type">list 1</li>
         <li>
             list 2
-            <ul class=":first-child :first-of-type :last-child :last-of-type :only-child">
-                <li class=":first-child">l2 - 1</li>
+            <ul class=":first-child :first-of-type :last-child :last-of-type :only-child :only-of-type">
+                <li class=":first-child :first-of-type">l2 - 1</li>
                 <li>l2 - 2</li>
                 <li class="hr :empty :last-child :last-of-type"></li>
             </ul>
         </li>
         <li class=":last-child :last-of-type">
-            <p class=":first-child :first-of-type :last-child :last-of-type :only-child">
-                The number of lines in a paragraph depends on the size of the browser window. If you resize <a href="#test" class=":first-child :last-child :last-of-type">the browser</a> window, the number of lines in this paragraph will change.
+            <p class=":first-child :first-of-type :last-child :last-of-type :only-child :only-of-type">
+                The number of lines in a paragraph depends on the size of the browser window. If you resize <a href="#test" class=":enabled :first-child :first-of-type :last-child :last-of-type :only-child :only-of-type">the browser</a> window, the number of lines in this paragraph will change.
             </p>
         </li>
     </ul>
@@ -55,7 +55,7 @@
         in the source code,
         but the browser
         ignores it.
-        <a class=":first-child :first-of-type :last-child :last-of-type">no href</a> and <a href="">empty href</a>
+        <a class=":first-child :first-of-type">no href</a> and <a href="" class=":enabled :last-child :last-of-type">empty href</a>
     </p>
 
     <p>

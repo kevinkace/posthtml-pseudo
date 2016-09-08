@@ -9,6 +9,16 @@ const assert = require("assert"),
 
 describe("/lib", () => {
     describe("/pseudo.js", () => {
+        // all
+        it("should run posthtml with pseudo using group all", () =>
+            posthtml()
+                .use(pseudo({ include : "all" }))
+                .process(fixtures.groups.all.input)
+                .then((result) => {
+                    assert.equal(result.html, fixtures.groups.all.expected);
+                })
+        );
+
         // firstLastOnly
         it("should run posthtml with pseudo using group firstLastOnly", () =>
             posthtml()
