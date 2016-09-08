@@ -68,5 +68,19 @@ module.exports = {
             input    : require("./classNames/root.html"),
             expected : require("./classNames/root.expected.html")
         }
+    },
+    groups : {
+        all : {
+            input    : require("./groups/all.html"),
+            expected : require("./groups/all.expected.html")
+        },
+        firstLastOnly : {
+            input    : require("./groups/firstLastOnly.html"),
+            expected : require("./groups/firstLastOnly.expected.html")
+        },
+        firstLast : {
+            input    : require("./groups/firstLast.html"),
+            expected : require("./groups/firstLast.expected.html")
+        }
     }
 };
