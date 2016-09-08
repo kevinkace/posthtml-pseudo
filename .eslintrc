@@ -40,7 +40,7 @@
         "afterColon": true,
         "on": "colon"
     } }],
-    "keyword-spacing": [2, { "before": true, "after": false, "overrides" : { "else": { "after": true }} }],
+    "keyword-spacing": [2, { "before": true, "after": false, "overrides" : { "else": { "after": true }, "return" : { "after" : true } } }],
     "new-cap": [2, { "newIsCap": true, "capIsNew": false }],
     "new-parens": 2,
     "no-array-constructor": 2,

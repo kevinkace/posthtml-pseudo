@@ -2,39 +2,39 @@
 
 module.exports = {
     input : {
-        tag: "a",
-        attrs: {
-            href: "#",
-            class: ""
+        tag   : "a",
+        attrs : {
+            href  : "#",
+            class : ""
         },
-        content: [
+        content : [
             "\n    ",
-                {
-                tag: "span",
-                attrs: {
-                    class: "animals__cat",
-                    style: "background: url(cat.png)"
+            {
+                tag   : "span",
+                attrs : {
+                    class : "animals__cat",
+                    style : "background: url(cat.png)"
                 },
-                content: ["Cat"]
+                content : ["Cat"]
             },
             "\n"
         ]
     },
     expected : {
-        tag: "a",
-        attrs: {
-            class: ":test",
-            href: "#"
+        tag   : "a",
+        attrs : {
+            class : ":test",
+            href  : "#"
         },
-        content: [
+        content : [
             "\n    ",
-                {
-                tag: "span",
-                attrs: {
-                    class: "animals__cat",
-                    style: "background: url(cat.png)"
+            {
+                tag   : "span",
+                attrs : {
+                    class : "animals__cat",
+                    style : "background: url(cat.png)"
                 },
-                content: ["Cat"]
+                content : ["Cat"]
             },
             "\n"
         ]

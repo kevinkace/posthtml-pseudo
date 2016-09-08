@@ -2,14 +2,9 @@
 
 const assert = require("assert"),
 
-    forEach = require("lodash/forEach"),
-    concat  = require("lodash/concat"),
-
     addClassNameToNode = require("../lib/addClassNameToNode"),
 
-    fixtures = require("./fixtures").addClassNameToNode,
-
-    groups = require("../lib/groups");
+    fixtures = require("./fixtures").addClassNameToNode;
 
 describe("/lib", () => {
     describe("/addClassNameToNode.js", () => {
