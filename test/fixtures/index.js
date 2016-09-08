@@ -94,5 +94,13 @@ module.exports = {
             input    : require("./groups/readWrite.html"),
             expected : require("./groups/readWrite.expected.html")
         }
+    },
+    addClassNameToNode : {
+        noClass    : require("./addClassNameToNode/noClass"),
+        emptyClass : require("./addClassNameToNode/emptyClass"),
+        endClass   : require("./addClassNameToNode/endClass"),
+        sortClass1 : require("./addClassNameToNode/sortClass1"),
+        sortClass2 : require("./addClassNameToNode/sortClass2"),
+        sortClass3 : require("./addClassNameToNode/sortClass3")
     }
 };
