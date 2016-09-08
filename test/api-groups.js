@@ -38,5 +38,25 @@ describe("/lib", () => {
                     assert.equal(result.html, fixtures.groups.input.expected);
                 })
         );
+
+        // only
+        it("should run posthtml with pseudo using group only", () =>
+            posthtml()
+                .use(pseudo({ include : "only" }))
+                .process(fixtures.groups.only.input)
+                .then((result) => {
+                    assert.equal(result.html, fixtures.groups.only.expected);
+                })
+        );
+
+        // readWrite
+        it("should run posthtml with pseudo using group readWrite", () =>
+            posthtml()
+                .use(pseudo({ include : "readWrite" }))
+                .process(fixtures.groups.readWrite.input)
+                .then((result) => {
+                    assert.equal(result.html, fixtures.groups.readWrite.expected);
+                })
+        );
     });
 });

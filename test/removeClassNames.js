@@ -27,7 +27,7 @@ describe("/lib", () => {
         });
 
         it("should remove multiple group names", () => {
-            assert.deepEqual(removeClassNames(groups.all, [ "onlyChild", "readWrite" ]), groups.all.filter((className) => concat(groups.onlyChild, groups.readWrite).indexOf(className) < 0));
+            assert.deepEqual(removeClassNames(groups.all, [ "only", "readWrite" ]), groups.all.filter((className) => concat(groups.only, groups.readWrite).indexOf(className) < 0));
         });
 
         it("should remove class names and group names", () => {

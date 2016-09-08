@@ -26,7 +26,7 @@ describe("/lib", () => {
         });
 
         it("should merge a class group", () => {
-            assert.deepEqual(addClassNames([ ":first-child" ], [ "onlyChild" ]), concat([ ":first-child" ], groups.onlyChild));
+            assert.deepEqual(addClassNames([ ":first-child" ], [ "only" ]), concat([ ":first-child" ], groups.only));
         });
 
         it("should add multiple class names", () => {

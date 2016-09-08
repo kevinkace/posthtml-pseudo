@@ -85,6 +85,14 @@ module.exports = {
         input : {
             input    : require("./groups/input.html"),
             expected : require("./groups/input.expected.html")
+        },
+        only : {
+            input    : require("./groups/only.html"),
+            expected : require("./groups/only.expected.html")
+        },
+        readWrite : {
+            input    : require("./groups/readWrite.html"),
+            expected : require("./groups/readWrite.expected.html")
         }
     }
 };
