@@ -42,7 +42,7 @@ describe("/lib", () => {
         });
 
         it("should merge class names and group names", () => {
-            assert.deepEqual(addClassNames([ ":root" ], [ "input", ":read-only" ]), concat([ ":root" ], groups.input, ":read-only"));
+            assert.deepEqual(addClassNames([ ":root" ], [ "input", ":first-child" ]), concat([ ":root" ], groups.input, ":first-child"));
         });
     });
 });

@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+    <title>page title</title>
+</head>
+<body>
+    <h1>header</h1>
+    <form action="#">
+        <input type="text" placeholder="Name" disabled="" class=":disabled :optional :read-write">
+        <input type="text" placeholder="Address" readonly="" class=":enabled :optional :read-only">
+        <input class="zipcode :enabled :optional :read-write" type="text" placeholder="Zip Code">
+
+        <input class="submit :enabled :optional :read-only" type="submit" name="" value="submit" readonly="readonly">
+
+        <select readonly="" class=":enabled :optional :read-only">
+            <option class=":enabled">option 1</option>
+            <option class=":enabled">option 2</option>
+            <option class=":enabled">option 3</option>
+        </select>
+
+        <textarea class=":enabled :optional :read-write"></textarea>
+
+        <button type="button" class=":enabled :optional">Button</button>
+    </form>
+
+    <div>
+        outer
+        <div>Inner</div>
+    </div>
+
+    <div></div>
+
+    <button type="button" disabled="" class=":disabled :optional">Button 2</button>
+
+    <ul>
+        <li>list 1</li>
+        <li>
+            list 2
+            <ul>
+                <li>l2 - 1</li>
+                <li>l2 - 2</li>
+                <li class="hr"></li>
+            </ul>
+        </li>
+        <li>
+            <p>
+                The number of lines in a paragraph depends on the size of the browser window. If you resize <a href="#test" class=":enabled">the browser</a> window, the number of lines in this paragraph will change.
+            </p>
+        </li>
+    </ul>
+
+    <p>
+        This paragraph
+        contains a lot of lines
+        in the source code,
+        but the browser
+        ignores it.
+        <a>no href</a> and <a href="" class=":enabled">empty href</a>
+    </p>
+
+    <p>
+        This paragraph
+        contains      a lot of spaces
+        in the source     code,
+        but the    browser
+        ignores it.
+    </p>
+
+    <p>
+        The number of lines in a paragraph depends on the size of the browser window. If you resize the browser window, the number of lines in this paragraph will change.
+    </p>
+</body>
+</html>

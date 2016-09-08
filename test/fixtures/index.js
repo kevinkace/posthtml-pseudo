@@ -81,6 +81,10 @@ module.exports = {
         firstLast : {
             input    : require("./groups/firstLast.html"),
             expected : require("./groups/firstLast.expected.html")
+        },
+        input : {
+            input    : require("./groups/input.html"),
+            expected : require("./groups/input.expected.html")
         }
     }
 };

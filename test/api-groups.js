@@ -28,5 +28,15 @@ describe("/lib", () => {
                     assert.equal(result.html, fixtures.groups.firstLast.expected);
                 })
         );
+
+        // input
+        it("should run posthtml with pseudo using group input", () =>
+            posthtml()
+                .use(pseudo({ include : "input" }))
+                .process(fixtures.groups.input.input)
+                .then((result) => {
+                    assert.equal(result.html, fixtures.groups.input.expected);
+                })
+        );
     });
 });
