@@ -2,7 +2,7 @@
 
 [![Build][build]][build-badge]
 
-This [PostHTML](https://github.com/posthtml/posthtml) plugin adds class names to elements within `<body>` for [pseudo classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes), eg `:first-child`/`:last-child`.
+A [PostHTML](https://github.com/posthtml/posthtml) plugin to add [pseudo classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) to elements within `<body>`, eg `:first-child`/`:last-child`.
 
 Before:
 ```html
@@ -26,13 +26,13 @@ After:
 </html>
 ```
 
-Pseudo classes dependent on input values (`:valid`, `:invalid`, ...), browser history (`:visted`, `:link`, ...), interaction (`:hover`, `:focus:`), parameters (`:nth-child()`, `:lang()`, ...), page url (`:target`) or require JS (`:indeterminate`), have been excluded.
+Pseudo classes dependent on input values (`:valid`, `:invalid`, ...), browser history (`:visted`, `:link`, ...), interaction (`:hover`, `:focus:`), parameters (`:nth-child()`, `:lang()`, ...), page url (`:target`) or require JS (`:indeterminate`), have been excluded. See [support list](#pseudo-class-names).
 
 ## Options
 
 Options config has two properties &mdash; `include` and `exclude` &mdash; to define which psuedo class names to add. Both `include` and `exclude` can be:
 
-- a string of a [class name group](https://github.com/kevinkace/posthtml-pseudo#class-name-groups)
+- a string of a [class name group](#class-name-groups)
 - a string of a class name (`/^:\S+/`, from those in the `all` group)
 - an array of class name groups and/or class names
 
