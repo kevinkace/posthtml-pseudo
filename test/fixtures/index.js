@@ -11,6 +11,14 @@ module.exports = {
         input    : require("./basic.html"),
         expected : require("./basic.expected.html")
     },
+    fragment : {
+        input    : require("./fragment.html"),
+        expected : require("./fragment.expected.html")
+    },
+    emptyHtml : {
+        input    : require("./emptyHtml.html"),
+        expected : require("./emptyHtml.expected.html")
+    },
     classNames : {
         ":disabled" : {
             input    : require("./classNames/disabled.html"),
@@ -96,11 +104,13 @@ module.exports = {
         }
     },
     addClassNameToNode : {
-        noClass    : require("./addClassNameToNode/noClass"),
-        emptyClass : require("./addClassNameToNode/emptyClass"),
-        endClass   : require("./addClassNameToNode/endClass"),
-        sortClass1 : require("./addClassNameToNode/sortClass1"),
-        sortClass2 : require("./addClassNameToNode/sortClass2"),
-        sortClass3 : require("./addClassNameToNode/sortClass3")
+        noClass     : require("./addClassNameToNode/noClass"),
+        emptyClass  : require("./addClassNameToNode/emptyClass"),
+        endClass    : require("./addClassNameToNode/endClass"),
+        sortClass1  : require("./addClassNameToNode/sortClass1"),
+        sortClass2  : require("./addClassNameToNode/sortClass2"),
+        sortClass3  : require("./addClassNameToNode/sortClass3"),
+        multiClass  : require("./addClassNameToNode/multiClass"),
+        multiClass2 : require("./addClassNameToNode/multiClass2")
     }
 };

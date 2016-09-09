@@ -32,6 +32,7 @@
   "repository": "kevinkace/posthtml-pseudo",
   "scripts": {
     "test": "npm run lint && mocha",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "cover": "istanbul cover --print both ./node_modules/mocha/bin/_mocha"
   }
 }

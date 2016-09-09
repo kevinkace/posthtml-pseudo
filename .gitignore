@@ -1,2 +1,6 @@
+# logs
 node_modules/
 npm-debug.log
+
+# Coverage directory used by tools like istanbul
+coverage

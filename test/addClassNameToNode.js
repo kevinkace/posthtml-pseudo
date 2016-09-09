@@ -31,5 +31,13 @@ describe("/lib", () => {
         it("should add a class name sorted properly to a node with a class attr 3", () => {
             assert.deepEqual(addClassNameToNode(fixtures.sortClass3.input, ":first-child"), fixtures.sortClass3.expected);
         });
+
+        it("should add a class name sorted properly to a node with a multiple classes", () => {
+            assert.deepEqual(addClassNameToNode(fixtures.multiClass.input, ":first-of-type"), fixtures.multiClass.expected);
+        });
+
+        it("should add a class name sorted properly to a node with a multiple classes 2", () => {
+            assert.deepEqual(addClassNameToNode(fixtures.multiClass2.input, ":first-of-type"), fixtures.multiClass2.expected);
+        });
     });
 });
