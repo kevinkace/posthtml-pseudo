@@ -18,7 +18,7 @@ Before:
 After:
 ```html
 <html>
-    <body class=":first-child :last-child">
+    <body>
         <div class=":first-child">one</div>
         <div>two</div>
         <div class=":last-child">three</div>
@@ -26,20 +26,20 @@ After:
 </html>
 ```
 
-Pseudo classes dependent on input values (`:valid`, `:invalid`, ...), browser history (`:visted`, `:link`, ...), interaction (`:hover`, `:focus:`), or parameters (`:nth-child()`, `:lang()`, ...) have been excluded.
+Pseudo classes dependent on input values (`:valid`, `:invalid`, ...), browser history (`:visted`, `:link`, ...), interaction (`:hover`, `:focus:`), parameters (`:nth-child()`, `:lang()`, ...), page url (`:target`) or require JS (`:indeterminate`), have been excluded.
 
 ## Options
 
 Options config has two properties &mdash; `include` and `exclude` &mdash; to define which psuedo class names to add. Both `include` and `exclude` can be:
 
-- a string of a class name group
+- a string of a [class name group](https://github.com/kevinkace/posthtml-pseudo#class-name-groups)
 - a string of a class name (`/^:\S+/`, from those in the `all` group)
 - an array of class name groups and/or class names
 
 ### Example Options Config
 
 ```js
-var config = {
+let config = {
     include : "all", // default is [ "all" ]
     exclude : [      // default is []
         "onlyChild",
@@ -75,7 +75,7 @@ var config = {
         ":last-child",
         ":last-child-of-type"
     ],
-    firstLastNoType : [
+    firstLastOnly : [
         ":first-child",
         ":last-child"
     ],
@@ -83,7 +83,9 @@ var config = {
         ":disabled",
         ":enabled",
         ":optional",
-        ":required"
+        ":required",
+        ":read-only",
+        ":read-write"
     ],
     onlyChild : [
         ":only-child",
@@ -98,36 +100,45 @@ var config = {
 
 ## Pseudo Class Names
 
-Those struck out are not to be implemented. Checkboxes track implementation status.
+List of supported and unsupported pseudo class names. Checkboxes track implementation status.
 
 - ~~`:active`~~
+- ~~`:any`~~
 - ~~`:checked`~~
+- [ ] `:default`
+- ~~`:dir()`~~ *
 - [X] `:disabled`
 - [X] `:empty`
 - [X] `:enabled`
+- [X] `:first`
 - [X] `:first-child`
 - [X] `:first-of-type`
+- ~~`:fullscreen`~~
 - ~~`:focus`~~
 - ~~`:hover`~~
+- ~~`:indeterminate`~~
 - ~~`:in-range`~~
 - ~~`:invalid`~~
 - ~~`:lang()`~~ *
 - [X] `:last-child`
 - [X] `:last-of-type`
+- ~~`:left`~~
 - ~~`:link`~~
 - ~~`:not()`~~ *
 - ~~`:nth-child()`~~ *
 - ~~`:nth-last-child()`~~ *
 - ~~`:nth-last-of-type()`~~ *
 - ~~`:nth-of-type()`~~ *
-- [X] `:only-of-type`
 - [X] `:only-child`
+- [X] `:only-of-type`
 - [X] `:optional`
 - ~~`:out-of-range`~~
 - [X] `:read-only`
 - [X] `:read-write`
 - [X] `:required`
+- ~~`:right`~~
 - [X] `:root`
+- ~~`:scope`~~
 - ~~`:target`~~
 - ~~`:valid`~~
 - ~~`:visited`~~
