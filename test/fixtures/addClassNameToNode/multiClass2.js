@@ -2,39 +2,39 @@
 
 module.exports = {
     input : {
-        tag: "a",
-        attrs: {
-            href: "#",
-            class: "something :first-child another-thing"
+        tag   : "a",
+        attrs : {
+            href  : "#",
+            class : "something :first-child another-thing"
         },
-        content: [
+        content : [
             "\n    ",
-                {
-                tag: "span",
-                attrs: {
-                    class: "animals__cat",
-                    style: "background: url(cat.png)"
+            {
+                tag   : "span",
+                attrs : {
+                    class : "animals__cat",
+                    style : "background: url(cat.png)"
                 },
-                content: ["Cat"]
+                content : ["Cat"]
             },
             "\n"
         ]
     },
     expected : {
-        tag: "a",
-        attrs: {
-            class: "another-thing something :first-child :first-of-type",
-            href: "#"
+        tag   : "a",
+        attrs : {
+            class : "another-thing something :first-child :first-of-type",
+            href  : "#"
         },
-        content: [
+        content : [
             "\n    ",
-                {
-                tag: "span",
-                attrs: {
-                    class: "animals__cat",
-                    style: "background: url(cat.png)"
+            {
+                tag   : "span",
+                attrs : {
+                    class : "animals__cat",
+                    style : "background: url(cat.png)"
                 },
-                content: ["Cat"]
+                content : ["Cat"]
             },
             "\n"
         ]
