@@ -56,6 +56,7 @@ let config = {
 ```js
 {
     all : [
+        ":default",
         ":disabled",
         ":empty",
         ":enabled",
@@ -81,7 +82,8 @@ let config = {
         ":first-child",
         ":last-child"
     ],
-    input : [
+    form : [
+        ":default",
         ":disabled",
         ":enabled",
         ":optional",
@@ -107,7 +109,7 @@ List of supported and unsupported pseudo class names. Checkboxes track implement
 - ~~`:active`~~
 - ~~`:any`~~
 - ~~`:checked`~~
-- [ ] `:default`
+- [X] `:default`
 - ~~`:dir()`~~ *
 - [X] `:disabled`
 - [X] `:empty`
@@ -153,4 +155,4 @@ List of supported and unsupported pseudo class names. Checkboxes track implement
 [coverage]: https://coveralls.io/github/kevinkace/posthtml-pseudo
 [coverage-badge]: https://coveralls.io/repos/github/kevinkace/posthtml-pseudo/badge.svg
 
-[super-badge]: https://cdn.rawgit.com/kevinkace/posthtml-pseudo/bf8a0ef/superawesome.svg
+[super-badge]: https://cdn.rawgit.com/kevinkace/posthtml-pseudo/f9adc82/superawesome.svg
