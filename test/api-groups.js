@@ -39,13 +39,13 @@ describe("/lib", () => {
                 })
         );
 
-        // input
-        it("should run posthtml with pseudo using group input", () =>
+        // form
+        it("should run posthtml with pseudo using group form", () =>
             posthtml()
-                .use(pseudo({ include : "input" }))
-                .process(fixtures.groups.input.input)
+                .use(pseudo({ include : "form" }))
+                .process(fixtures.groups.form.input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.groups.input.expected);
+                    assert.equal(result.html, fixtures.groups.form.expected);
                 })
         );
 

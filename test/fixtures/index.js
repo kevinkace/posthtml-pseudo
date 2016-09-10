@@ -28,6 +28,10 @@ module.exports = {
         expected : require("./excludeAll.expected.html")
     },
     classNames : {
+        ":default" : {
+            input    : require("./classNames/default.html"),
+            expected : require("./classNames/default.expected.html")
+        },
         ":disabled" : {
             input    : require("./classNames/disabled.html"),
             expected : require("./classNames/disabled.expected.html")
@@ -98,9 +102,9 @@ module.exports = {
             input    : require("./groups/firstLast.html"),
             expected : require("./groups/firstLast.expected.html")
         },
-        input : {
-            input    : require("./groups/input.html"),
-            expected : require("./groups/input.expected.html")
+        form : {
+            input    : require("./groups/form.html"),
+            expected : require("./groups/form.expected.html")
         },
         only : {
             input    : require("./groups/only.html"),

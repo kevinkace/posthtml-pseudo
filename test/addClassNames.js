@@ -38,11 +38,11 @@ describe("/lib", () => {
         });
 
         it("should add class names and group names", () => {
-            assert.deepEqual(addClassNames([], [ ":first-child", "input" ]), concat([ ":first-child" ], groups.input));
+            assert.deepEqual(addClassNames([], [ ":first-child", "form" ]), concat([ ":first-child" ], groups.form));
         });
 
         it("should merge class names and group names", () => {
-            assert.deepEqual(addClassNames([ ":root" ], [ "input", ":first-child" ]), concat([ ":root" ], groups.input, ":first-child"));
+            assert.deepEqual(addClassNames([ ":root" ], [ "form", ":first-child" ]), concat([ ":root" ], groups.form, ":first-child"));
         });
     });
 });

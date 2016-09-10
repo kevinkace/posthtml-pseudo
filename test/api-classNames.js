@@ -9,6 +9,16 @@ const assert = require("assert"),
 
 describe("/lib", () => {
     describe("/pseudo.js", () => {
+        // :default
+        it("should add default", () =>
+            posthtml()
+                .use(pseudo({ include : ":default" }))
+                .process(fixtures.classNames[":default"].input)
+                .then((result) => {
+                    assert.equal(result.html, fixtures.classNames[":default"].expected);
+                })
+        );
+
         // :disabled
         it("should add disabled", () =>
             posthtml()

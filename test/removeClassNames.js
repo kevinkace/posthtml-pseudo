@@ -31,7 +31,7 @@ describe("/lib", () => {
         });
 
         it("should remove class names and group names", () => {
-            assert.deepEqual(removeClassNames(groups.all, [ ":first-child", "input" ]), groups.all.filter((className) => className !== ":first-child" && groups.input.indexOf(className) < 0));
+            assert.deepEqual(removeClassNames(groups.all, [ ":first-child", "form" ]), groups.all.filter((className) => className !== ":first-child" && groups.form.indexOf(className) < 0));
         });
     });
 });
