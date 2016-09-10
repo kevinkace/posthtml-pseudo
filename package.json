@@ -15,7 +15,8 @@
     "eslint-plugin-promise": "^2.0.1",
     "eslint-plugin-standard": "^2.0.0",
     "istanbul": "^0.4.5",
-    "mocha": "^3.0.0"
+    "mocha": "^3.0.0",
+    "publish-please": "^2.2.0"
   },
   "engines": {
     "node": ">=4"
@@ -35,6 +36,8 @@
     "test": "npm run lint && mocha",
     "lint": "eslint .",
     "coverage": "istanbul cover --print both ./node_modules/mocha/bin/_mocha",
-    "coveralls": "cat ./coverage/lcov.info | \"./node_modules/.bin/coveralls\""
+    "coveralls": "cat ./coverage/lcov.info | \"./node_modules/.bin/coveralls\"",
+    "publish-please": "publish-please",
+    "prepublish": "publish-please guard"
   }
 }
