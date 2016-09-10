@@ -19,6 +19,14 @@ module.exports = {
         input    : require("./emptyHtml.html"),
         expected : require("./emptyHtml.expected.html")
     },
+    exclude : {
+        input    : require("./exclude.html"),
+        expected : require("./exclude.expected.html")
+    },
+    excludeAll : {
+        input    : require("./excludeAll.html"),
+        expected : require("./excludeAll.expected.html")
+    },
     classNames : {
         ":disabled" : {
             input    : require("./classNames/disabled.html"),

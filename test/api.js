@@ -34,5 +34,28 @@ describe("/lib", () => {
                     assert.equal(result.html, fixtures.emptyHtml.expected);
                 })
         );
+
+        it("should process include and exclude", () =>
+            posthtml()
+                .use(pseudo({
+                    include : "firstLastOnly",
+                    exclude : ":last-child"
+                }))
+                .process(fixtures.exclude.input)
+                .then((result) => {
+                    assert.equal(result.html, fixtures.exclude.expected);
+                })
+        );
+
+        it("should process excluding group all", () =>
+            posthtml()
+                .use(pseudo({
+                    exclude : "all"
+                }))
+                .process(fixtures.excludeAll.input)
+                .then((result) => {
+                    assert.equal(result.html, fixtures.excludeAll.expected);
+                })
+        );
     });
 });
