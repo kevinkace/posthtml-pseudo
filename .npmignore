@@ -8,6 +8,7 @@ coverage/
 
 # npm publish
 .publishrc
+.npmignore
 
 # tests
 test/
@@ -17,6 +18,7 @@ test/
 
 #eslint
 .eslintrc
+.eslintignore
 
 # travis
 .travis.yml
