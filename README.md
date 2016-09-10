@@ -2,6 +2,7 @@
 
 [![Build][build-badge]][build]
 [![Coverage][coverage-badge]][coverage]
+![super awesome][super-badge]
 
 A [PostHTML](https://github.com/posthtml/posthtml) plugin to add [pseudo classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) to elements within `<body>`, eg `:first-child`/`:last-child`.
 
@@ -151,3 +152,5 @@ List of supported and unsupported pseudo class names. Checkboxes track implement
 
 [coverage]: https://coveralls.io/github/kevinkace/posthtml-pseudo
 [coverage-badge]: https://coveralls.io/repos/github/kevinkace/posthtml-pseudo/badge.svg
+
+[super-badge]: https://github.com/kevinkace/posthtml-pseudo/raw/master/superawesome.svg
