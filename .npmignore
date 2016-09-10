@@ -1,2 +1,22 @@
+# logs
 node_modules/
 npm-debug.log
+
+# coverage directory and config
+coverage/
+.coveralls.yml
+
+# npm publish
+.publishrc
+
+# tests
+test/
+
+# gitignore
+.gitignore
+
+#eslint
+.eslintrc
+
+# travis
+.travis.yml
