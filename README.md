@@ -153,4 +153,4 @@ List of supported and unsupported pseudo class names. Checkboxes track implement
 [coverage]: https://coveralls.io/github/kevinkace/posthtml-pseudo
 [coverage-badge]: https://coveralls.io/repos/github/kevinkace/posthtml-pseudo/badge.svg
 
-[super-badge]: https://github.com/kevinkace/posthtml-pseudo/raw/master/superawesome.svg
+[super-badge]: https://cdn.rawgit.com/kevinkace/posthtml-pseudo/master/superawesome.svg
