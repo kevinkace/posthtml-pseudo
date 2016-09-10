@@ -2,5 +2,6 @@
 node_modules/
 npm-debug.log
 
-# Coverage directory used by tools like istanbul
-coverage
+# coverage directory and config
+coverage/
+.coveralls.yml

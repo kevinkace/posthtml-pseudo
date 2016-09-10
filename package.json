@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "assert": "^1.4.1",
+    "coveralls": "^2.11.12",
     "eslint": "^3.4.0",
     "eslint-plugin-promise": "^2.0.1",
     "eslint-plugin-standard": "^2.0.0",
@@ -33,6 +34,7 @@
   "scripts": {
     "test": "npm run lint && mocha",
     "lint": "eslint .",
-    "cover": "istanbul cover --print both ./node_modules/mocha/bin/_mocha"
+    "coverage": "istanbul cover --print both ./node_modules/mocha/bin/_mocha",
+    "coveralls": "cat ./coverage/lcov.info | \"./node_modules/.bin/coveralls\""
   }
 }
