@@ -11,7 +11,7 @@ const pseudo = require("../index"),
 describe("/lib", () => {
     describe("/pseudo.js", () => {
         // :default
-        it("should add default", () =>
+        it("should add :default", () =>
             posthtml()
                 .use(pseudo({ include : ":default" }))
                 .process(fixtures[":default"].input)
@@ -21,7 +21,7 @@ describe("/lib", () => {
         );
 
         // :disabled
-        it("should add disabled", () =>
+        it("should add :disabled", () =>
             posthtml()
                 .use(pseudo({ include : ":disabled" }))
                 .process(fixtures[":disabled"].input)
@@ -31,7 +31,7 @@ describe("/lib", () => {
         );
 
         // :empty
-        it("should add empty", () =>
+        it("should add :empty", () =>
             posthtml()
                 .use(pseudo({ include : ":empty" }))
                 .process(fixtures[":empty"].input)
@@ -41,7 +41,7 @@ describe("/lib", () => {
         );
 
         // :enabled
-        it("should add enabled", () =>
+        it("should add :enabled", () =>
             posthtml()
                 .use(pseudo({ include : ":enabled" }))
                 .process(fixtures[":enabled"].input)
@@ -51,7 +51,7 @@ describe("/lib", () => {
         );
 
         // :first-child
-        it("should add first-child", () =>
+        it("should add :first-child", () =>
             posthtml()
                 .use(pseudo({ include : ":first-child" }))
                 .process(fixtures[":first-child"].input)
@@ -61,7 +61,7 @@ describe("/lib", () => {
         );
 
         // :first-of-type
-        it("should add first-of-type", () =>
+        it("should add :first-of-type", () =>
             posthtml()
                 .use(pseudo({ include : ":first-of-type" }))
                 .process(fixtures[":first-of-type"].input)
@@ -71,7 +71,7 @@ describe("/lib", () => {
         );
 
         // :last-child
-        it("should add last-child", () =>
+        it("should add :last-child", () =>
             posthtml()
                 .use(pseudo({ include : ":last-child" }))
                 .process(fixtures[":last-child"].input)
@@ -81,7 +81,7 @@ describe("/lib", () => {
         );
 
         // :last-of-type
-        it("should add last-of-type", () =>
+        it("should add :last-of-type", () =>
             posthtml()
                 .use(pseudo({ include : ":last-of-type" }))
                 .process(fixtures[":last-of-type"].input)
@@ -91,7 +91,7 @@ describe("/lib", () => {
         );
 
         // :only-child
-        it("should add only-child", () =>
+        it("should add :only-child", () =>
             posthtml()
                 .use(pseudo({ include : ":only-child" }))
                 .process(fixtures[":only-child"].input)
@@ -101,7 +101,7 @@ describe("/lib", () => {
         );
 
         // :only-of-type
-        it("should add only-of-type", () =>
+        it("should add :only-of-type", () =>
             posthtml()
                 .use(pseudo({ include : ":only-of-type" }))
                 .process(fixtures[":only-of-type"].input)
@@ -111,7 +111,7 @@ describe("/lib", () => {
         );
 
         // :optional
-        it("should add optional", () =>
+        it("should add :optional", () =>
             posthtml()
                 .use(pseudo({ include : ":optional" }))
                 .process(fixtures[":optional"].input)
@@ -121,7 +121,7 @@ describe("/lib", () => {
         );
 
         // :read-only
-        it("should add read-only", () =>
+        it("should add :read-only", () =>
             posthtml()
                 .use(pseudo({ include : ":read-only" }))
                 .process(fixtures[":read-only"].input)
@@ -131,7 +131,7 @@ describe("/lib", () => {
         );
 
         // :read-write
-        it("should add read-write", () =>
+        it("should add :read-write", () =>
             posthtml()
                 .use(pseudo({ include : ":read-write" }))
                 .process(fixtures[":read-write"].input)
@@ -141,7 +141,7 @@ describe("/lib", () => {
         );
 
         // :required
-        it("should add required", () =>
+        it("should add :required", () =>
             posthtml()
                 .use(pseudo({ include : ":required" }))
                 .process(fixtures[":required"].input)
@@ -151,7 +151,7 @@ describe("/lib", () => {
         );
 
         // :root
-        it("should add root", () =>
+        it("should add :root", () =>
             posthtml()
                 .use(pseudo({ include : ":root" }))
                 .process(fixtures[":root"].input)
