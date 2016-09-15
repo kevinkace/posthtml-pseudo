@@ -1,10 +1,11 @@
 "use strict";
 
-const assert = require("assert"),
+const addClassNameToNode = require("../lib/addClassNameToNode"),
 
-    addClassNameToNode = require("../lib/addClassNameToNode"),
+    fixtures = require("./fixtures").addClassNameToNode,
 
-    fixtures = require("./fixtures").addClassNameToNode;
+    assert = require("assert");
+
 
 describe("/lib", () => {
     describe("/addClassNameToNode.js", () => {

@@ -1,11 +1,12 @@
 "use strict";
 
-const assert = require("assert"),
-
+const pseudo = require("../index"),
     posthtml = require("posthtml"),
-    pseudo   = require("../index"),
 
-    fixtures = require("./fixtures");
+    fixtures = require("./fixtures").classNames,
+
+    assert = require("assert");
+
 
 describe("/lib", () => {
     describe("/pseudo.js", () => {
@@ -13,9 +14,9 @@ describe("/lib", () => {
         it("should add default", () =>
             posthtml()
                 .use(pseudo({ include : ":default" }))
-                .process(fixtures.classNames[":default"].input)
+                .process(fixtures[":default"].input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.classNames[":default"].expected);
+                    assert.equal(result.html, fixtures[":default"].expected);
                 })
         );
 
@@ -23,9 +24,9 @@ describe("/lib", () => {
         it("should add disabled", () =>
             posthtml()
                 .use(pseudo({ include : ":disabled" }))
-                .process(fixtures.classNames[":disabled"].input)
+                .process(fixtures[":disabled"].input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.classNames[":disabled"].expected);
+                    assert.equal(result.html, fixtures[":disabled"].expected);
                 })
         );
 
@@ -33,9 +34,9 @@ describe("/lib", () => {
         it("should add empty", () =>
             posthtml()
                 .use(pseudo({ include : ":empty" }))
-                .process(fixtures.classNames[":empty"].input)
+                .process(fixtures[":empty"].input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.classNames[":empty"].expected);
+                    assert.equal(result.html, fixtures[":empty"].expected);
                 })
         );
 
@@ -43,9 +44,9 @@ describe("/lib", () => {
         it("should add enabled", () =>
             posthtml()
                 .use(pseudo({ include : ":enabled" }))
-                .process(fixtures.classNames[":enabled"].input)
+                .process(fixtures[":enabled"].input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.classNames[":enabled"].expected);
+                    assert.equal(result.html, fixtures[":enabled"].expected);
                 })
         );
 
@@ -53,9 +54,9 @@ describe("/lib", () => {
         it("should add first-child", () =>
             posthtml()
                 .use(pseudo({ include : ":first-child" }))
-                .process(fixtures.classNames[":first-child"].input)
+                .process(fixtures[":first-child"].input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.classNames[":first-child"].expected);
+                    assert.equal(result.html, fixtures[":first-child"].expected);
                 })
         );
 
@@ -63,9 +64,9 @@ describe("/lib", () => {
         it("should add first-of-type", () =>
             posthtml()
                 .use(pseudo({ include : ":first-of-type" }))
-                .process(fixtures.classNames[":first-of-type"].input)
+                .process(fixtures[":first-of-type"].input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.classNames[":first-of-type"].expected);
+                    assert.equal(result.html, fixtures[":first-of-type"].expected);
                 })
         );
 
@@ -73,9 +74,9 @@ describe("/lib", () => {
         it("should add last-child", () =>
             posthtml()
                 .use(pseudo({ include : ":last-child" }))
-                .process(fixtures.classNames[":last-child"].input)
+                .process(fixtures[":last-child"].input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.classNames[":last-child"].expected);
+                    assert.equal(result.html, fixtures[":last-child"].expected);
                 })
         );
 
@@ -83,9 +84,9 @@ describe("/lib", () => {
         it("should add last-of-type", () =>
             posthtml()
                 .use(pseudo({ include : ":last-of-type" }))
-                .process(fixtures.classNames[":last-of-type"].input)
+                .process(fixtures[":last-of-type"].input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.classNames[":last-of-type"].expected);
+                    assert.equal(result.html, fixtures[":last-of-type"].expected);
                 })
         );
 
@@ -93,9 +94,9 @@ describe("/lib", () => {
         it("should add only-child", () =>
             posthtml()
                 .use(pseudo({ include : ":only-child" }))
-                .process(fixtures.classNames[":only-child"].input)
+                .process(fixtures[":only-child"].input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.classNames[":only-child"].expected);
+                    assert.equal(result.html, fixtures[":only-child"].expected);
                 })
         );
 
@@ -103,9 +104,9 @@ describe("/lib", () => {
         it("should add only-of-type", () =>
             posthtml()
                 .use(pseudo({ include : ":only-of-type" }))
-                .process(fixtures.classNames[":only-of-type"].input)
+                .process(fixtures[":only-of-type"].input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.classNames[":only-of-type"].expected);
+                    assert.equal(result.html, fixtures[":only-of-type"].expected);
                 })
         );
 
@@ -113,9 +114,9 @@ describe("/lib", () => {
         it("should add optional", () =>
             posthtml()
                 .use(pseudo({ include : ":optional" }))
-                .process(fixtures.classNames[":optional"].input)
+                .process(fixtures[":optional"].input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.classNames[":optional"].expected);
+                    assert.equal(result.html, fixtures[":optional"].expected);
                 })
         );
 
@@ -123,9 +124,9 @@ describe("/lib", () => {
         it("should add read-only", () =>
             posthtml()
                 .use(pseudo({ include : ":read-only" }))
-                .process(fixtures.classNames[":read-only"].input)
+                .process(fixtures[":read-only"].input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.classNames[":read-only"].expected);
+                    assert.equal(result.html, fixtures[":read-only"].expected);
                 })
         );
 
@@ -133,9 +134,9 @@ describe("/lib", () => {
         it("should add read-write", () =>
             posthtml()
                 .use(pseudo({ include : ":read-write" }))
-                .process(fixtures.classNames[":read-write"].input)
+                .process(fixtures[":read-write"].input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.classNames[":read-write"].expected);
+                    assert.equal(result.html, fixtures[":read-write"].expected);
                 })
         );
 
@@ -143,9 +144,9 @@ describe("/lib", () => {
         it("should add required", () =>
             posthtml()
                 .use(pseudo({ include : ":required" }))
-                .process(fixtures.classNames[":required"].input)
+                .process(fixtures[":required"].input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.classNames[":required"].expected);
+                    assert.equal(result.html, fixtures[":required"].expected);
                 })
         );
 
@@ -153,9 +154,9 @@ describe("/lib", () => {
         it("should add root", () =>
             posthtml()
                 .use(pseudo({ include : ":root" }))
-                .process(fixtures.classNames[":root"].input)
+                .process(fixtures[":root"].input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.classNames[":root"].expected);
+                    assert.equal(result.html, fixtures[":root"].expected);
                 })
         );
     });

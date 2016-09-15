@@ -1,14 +1,15 @@
 "use strict";
 
-const assert = require("assert"),
+const removeClassNames = require("../lib/removeClassNames"),
+
+    groups = require("../lib/groups"),
+
+    assert = require("assert"),
 
     forEach = require("lodash/forEach"),
     clone   = require("lodash/clone"),
-    concat  = require("lodash/concat"),
+    concat  = require("lodash/concat");
 
-    removeClassNames = require("../lib/removeClassNames"),
-
-    groups = require("../lib/groups");
 
 describe("/lib", () => {
     describe("/removeClassNames.js", () => {

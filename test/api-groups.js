@@ -1,11 +1,12 @@
 "use strict";
 
-const assert = require("assert"),
-
+const pseudo = require("../"),
     posthtml = require("posthtml"),
-    pseudo   = require("../index"),
 
-    fixtures = require("./fixtures");
+    fixtures = require("./fixtures").groups,
+
+    assert = require("assert");
+
 
 describe("/lib", () => {
     describe("/pseudo.js", () => {
@@ -13,9 +14,9 @@ describe("/lib", () => {
         it("should run posthtml with pseudo using group all", () =>
             posthtml()
                 .use(pseudo({ include : "all" }))
-                .process(fixtures.groups.all.input)
+                .process(fixtures.all.input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.groups.all.expected);
+                    assert.equal(result.html, fixtures.all.expected);
                 })
         );
 
@@ -23,9 +24,9 @@ describe("/lib", () => {
         it("should run posthtml with pseudo using group firstLastOnly", () =>
             posthtml()
                 .use(pseudo({ include : "firstLastOnly" }))
-                .process(fixtures.groups.firstLastOnly.input)
+                .process(fixtures.firstLastOnly.input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.groups.firstLastOnly.expected);
+                    assert.equal(result.html, fixtures.firstLastOnly.expected);
                 })
         );
 
@@ -33,9 +34,9 @@ describe("/lib", () => {
         it("should run posthtml with pseudo using group firstLast", () =>
             posthtml()
                 .use(pseudo({ include : "firstLast" }))
-                .process(fixtures.groups.firstLast.input)
+                .process(fixtures.firstLast.input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.groups.firstLast.expected);
+                    assert.equal(result.html, fixtures.firstLast.expected);
                 })
         );
 
@@ -43,9 +44,9 @@ describe("/lib", () => {
         it("should run posthtml with pseudo using group form", () =>
             posthtml()
                 .use(pseudo({ include : "form" }))
-                .process(fixtures.groups.form.input)
+                .process(fixtures.form.input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.groups.form.expected);
+                    assert.equal(result.html, fixtures.form.expected);
                 })
         );
 
@@ -53,9 +54,9 @@ describe("/lib", () => {
         it("should run posthtml with pseudo using group only", () =>
             posthtml()
                 .use(pseudo({ include : "only" }))
-                .process(fixtures.groups.only.input)
+                .process(fixtures.only.input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.groups.only.expected);
+                    assert.equal(result.html, fixtures.only.expected);
                 })
         );
 
@@ -63,9 +64,9 @@ describe("/lib", () => {
         it("should run posthtml with pseudo using group readWrite", () =>
             posthtml()
                 .use(pseudo({ include : "readWrite" }))
-                .process(fixtures.groups.readWrite.input)
+                .process(fixtures.readWrite.input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.groups.readWrite.expected);
+                    assert.equal(result.html, fixtures.readWrite.expected);
                 })
         );
     });

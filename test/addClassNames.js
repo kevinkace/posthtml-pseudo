@@ -1,13 +1,14 @@
 "use strict";
 
-const assert = require("assert"),
+const addClassNames = require("../lib/addClassNames"),
+
+    groups = require("../lib/groups"),
+
+    assert = require("assert"),
 
     forEach = require("lodash/forEach"),
-    concat  = require("lodash/concat"),
+    concat  = require("lodash/concat");
 
-    addClassNames = require("../lib/addClassNames"),
-
-    groups = require("../lib/groups");
 
 describe("/lib", () => {
     describe("/addClassNames.js", () => {
