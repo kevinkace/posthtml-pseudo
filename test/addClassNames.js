@@ -44,5 +44,9 @@ describe("/lib", () => {
         it("should merge class names and group names", () => {
             assert.deepEqual(addClassNames([ ":root" ], [ "form", ":first-child" ]), concat([ ":root" ], groups.form, ":first-child"));
         });
+
+        it("should add class names without duplication", () => {
+            assert.deepEqual(addClassNames([], [ "all", ":first-child" ]), groups.all);
+        });
     });
 });
