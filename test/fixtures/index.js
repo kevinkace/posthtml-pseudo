@@ -124,5 +124,11 @@ module.exports = {
         sortClass3  : require("./addClassNameToNode/sortClass3"),
         multiClass  : require("./addClassNameToNode/multiClass"),
         multiClass2 : require("./addClassNameToNode/multiClass2")
+    },
+    customClassNames : {
+        class_string : {
+            input    : require("./customClassNames/class_string"),
+            expected : require("./customClassNames/class_string.expected")
+        }
     }
 };
