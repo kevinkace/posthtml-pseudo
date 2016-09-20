@@ -38,7 +38,7 @@ describe("/lib", () => {
                     include : [{
                         ":first-child" : "fc"
                     }, {
-                        ":last-child"  : "lc"
+                        ":last-child" : "lc"
                     }]
                 }))
                 .process(fixtures.class_string2.input)
