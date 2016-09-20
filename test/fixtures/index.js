@@ -131,6 +131,14 @@ module.exports = {
         group_string : {
             input    : require("./customClassNames/group_string"),
             expected : require("./customClassNames/group_string.expected")
+        },
+        class_string2 : {
+            input    : require("./customClassNames/class_string2"),
+            expected : require("./customClassNames/class_string2.expected")
+        },
+        class_function : {
+            input    : require("./customClassNames/class_function"),
+            expected : require("./customClassNames/class_function.expected")
         }
     }
 };

@@ -31,5 +31,35 @@ describe("/lib", () => {
                     assert.equal(result.html, fixtures.group_string.expected);
                 })
         );
+
+        it("should add different custom class names for different pseudo classes", () =>
+            posthtml()
+                .use(pseudo({
+                    include : [{
+                        ":first-child" : "fc"
+                    }, {
+                        ":last-child"  : "lc"
+                    }]
+                }))
+                .process(fixtures.class_string2.input)
+                .then((result) => {
+                    assert.equal(result.html, fixtures.class_string2.expected);
+                })
+        );
+
+        it("should add custom class name using function", () =>
+            posthtml()
+                .use(pseudo({
+                    include : [{
+                        "firstLastOnly" : (className) => {
+                            return className.replace(/:|-/g, "");
+                        }
+                    }]
+                }))
+                .process(fixtures.class_function.input)
+                .then((result) => {
+                    assert.equal(result.html, fixtures.class_function.expected);
+                })
+        );
     });
 });
