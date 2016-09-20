@@ -116,19 +116,21 @@ module.exports = {
         }
     },
     addClassNameToNode : {
-        noClass     : require("./addClassNameToNode/noClass"),
-        emptyClass  : require("./addClassNameToNode/emptyClass"),
-        endClass    : require("./addClassNameToNode/endClass"),
-        sortClass1  : require("./addClassNameToNode/sortClass1"),
-        sortClass2  : require("./addClassNameToNode/sortClass2"),
-        sortClass3  : require("./addClassNameToNode/sortClass3"),
-        multiClass  : require("./addClassNameToNode/multiClass"),
-        multiClass2 : require("./addClassNameToNode/multiClass2")
+        noClass      : require("./addClassNameToNode/noClass"),
+        emptyClass   : require("./addClassNameToNode/emptyClass"),
+        endClass     : require("./addClassNameToNode/endClass"),
+        noDuplicate  : require("./addClassNameToNode/noDuplicate"),
+        noDuplicate2 : require("./addClassNameToNode/noDuplicate2"),
+        noDuplicate3 : require("./addClassNameToNode/noDuplicate3")
     },
     customClassNames : {
         class_string : {
             input    : require("./customClassNames/class_string"),
             expected : require("./customClassNames/class_string.expected")
+        },
+        group_string : {
+            input    : require("./customClassNames/group_string"),
+            expected : require("./customClassNames/group_string.expected")
         }
     }
 };

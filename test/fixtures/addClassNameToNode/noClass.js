@@ -17,7 +17,8 @@ module.exports = {
                 content : ["Cat"]
             },
             "\n"
-        ]
+        ],
+        pseudo : [ ":test" ]
     },
     expected : {
         tag   : "a",

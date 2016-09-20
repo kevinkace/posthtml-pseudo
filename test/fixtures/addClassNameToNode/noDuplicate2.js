@@ -5,7 +5,7 @@ module.exports = {
         tag   : "a",
         attrs : {
             href  : "#",
-            class : "something :first-child"
+            class : "something :test something"
         },
         content : [
             "\n    ",
@@ -18,12 +18,13 @@ module.exports = {
                 content : ["Cat"]
             },
             "\n"
-        ]
+        ],
+        pseudo : [ ":test" ]
     },
     expected : {
         tag   : "a",
         attrs : {
-            class : "something :first-child :first-of-type",
+            class : "something :test something",
             href  : "#"
         },
         content : [

@@ -125,7 +125,7 @@
     "no-with": 2,
     "object-property-newline": [2, { "allowMultiplePropertiesPerLine": true }],
     "one-var": [2, { "initialized": "always" }],
-    "operator-linebreak": [2, "after", { "overrides": { "?": "before", ":": "before" } }],
+    "operator-linebreak": [2, "after", { "overrides": { "?": "after", ":": "after" } }],
     "padded-blocks": [2, "never"],
     "quotes": [2, "double", { "avoidEscape": true, "allowTemplateLiterals": true }],
     "rest-spread-spacing": [2, "never"],
