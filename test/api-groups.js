@@ -13,7 +13,11 @@ describe("/lib", () => {
         // all
         it("should run posthtml with pseudo using group all", () =>
             posthtml()
-                .use(pseudo({ include : "all" }))
+                .use(pseudo({
+                    include : {
+                        classNames : "all"
+                    }
+                }))
                 .process(fixtures.all.input)
                 .then((result) => {
                     assert.equal(result.html, fixtures.all.expected);
@@ -23,7 +27,11 @@ describe("/lib", () => {
         // firstLastOnly
         it("should run posthtml with pseudo using group firstLastOnly", () =>
             posthtml()
-                .use(pseudo({ include : "firstLastOnly" }))
+                .use(pseudo({
+                    include : {
+                        classNames : "firstLastOnly"
+                    }
+                }))
                 .process(fixtures.firstLastOnly.input)
                 .then((result) => {
                     assert.equal(result.html, fixtures.firstLastOnly.expected);
@@ -33,7 +41,11 @@ describe("/lib", () => {
         // firstLast
         it("should run posthtml with pseudo using group firstLast", () =>
             posthtml()
-                .use(pseudo({ include : "firstLast" }))
+                .use(pseudo({
+                    include : {
+                        classNames : "firstLast"
+                    }
+                }))
                 .process(fixtures.firstLast.input)
                 .then((result) => {
                     assert.equal(result.html, fixtures.firstLast.expected);
@@ -43,7 +55,11 @@ describe("/lib", () => {
         // form
         it("should run posthtml with pseudo using group form", () =>
             posthtml()
-                .use(pseudo({ include : "form" }))
+                .use(pseudo({
+                    include : {
+                        classNames : "form"
+                    }
+                }))
                 .process(fixtures.form.input)
                 .then((result) => {
                     assert.equal(result.html, fixtures.form.expected);
@@ -53,7 +69,11 @@ describe("/lib", () => {
         // only
         it("should run posthtml with pseudo using group only", () =>
             posthtml()
-                .use(pseudo({ include : "only" }))
+                .use(pseudo({
+                    include : {
+                        classNames : "only"
+                    }
+                }))
                 .process(fixtures.only.input)
                 .then((result) => {
                     assert.equal(result.html, fixtures.only.expected);
@@ -63,7 +83,11 @@ describe("/lib", () => {
         // readWrite
         it("should run posthtml with pseudo using group readWrite", () =>
             posthtml()
-                .use(pseudo({ include : "readWrite" }))
+                .use(pseudo({
+                    include : {
+                        classNames : "readWrite"
+                    }
+                }))
                 .process(fixtures.readWrite.input)
                 .then((result) => {
                     assert.equal(result.html, fixtures.readWrite.expected);

@@ -39,8 +39,12 @@ describe("/lib", () => {
         it("should process include and exclude", () =>
             posthtml()
                 .use(pseudo({
-                    include : "firstLastOnly",
-                    exclude : ":last-child"
+                    include : {
+                        classNames : "firstLastOnly"
+                    },
+                    exclude : {
+                        classNames : ":last-child"
+                    }
                 }))
                 .process(fixtures.exclude.input)
                 .then((result) => {
@@ -51,7 +55,9 @@ describe("/lib", () => {
         it("should process excluding group all", () =>
             posthtml()
                 .use(pseudo({
-                    exclude : "all"
+                    exclude : {
+                        classNames : "all"
+                    }
                 }))
                 .process(fixtures.excludeAll.input)
                 .then((result) => {
