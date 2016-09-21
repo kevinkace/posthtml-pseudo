@@ -41,11 +41,11 @@ describe("/lib", () => {
                 .use(pseudo({
                     include : {
                         classNames : [{
-                                ":first-child" : "fc"
-                            }, {
-                                ":last-child" : "lc"
-                            }]
-                        }
+                            ":first-child" : "fc"
+                        }, {
+                            ":last-child" : "lc"
+                        }]
+                    }
                 }))
                 .process(fixtures.class_string2.input)
                 .then((result) => {

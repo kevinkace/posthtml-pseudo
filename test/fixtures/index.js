@@ -140,5 +140,15 @@ module.exports = {
             input    : require("./customClassNames/class_function"),
             expected : require("./customClassNames/class_function.expected")
         }
+    },
+    filters : {
+        group_include_tag : {
+            input    : require("./filters/group_include_tag.html"),
+            expected : require("./filters/group_include_tag.expected.html")
+        },
+        group_include_tags : {
+            input    : require("./filters/group_include_tags.html"),
+            expected : require("./filters/group_include_tags.expected.html")
+        }
     }
 };
