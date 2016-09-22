@@ -28,11 +28,11 @@ After:
 </html>
 ```
 
-Pseudo classes dependent on input values (`:valid`, `:invalid`, ...), browser history (`:visted`, `:link`, ...), interaction (`:hover`, `:focus:`), parameters (`:nth-child()`, `:lang()`, ...), page url (`:target`) or require JS (`:indeterminate`), have been excluded. See [support list](#pseudo-class-names).
+**Note on supported classes**: Pseudo classes dependent on input values (`:valid`, `:invalid`, ...), browser history (`:visted`, `:link`, ...), interaction (`:hover`, `:focus:`), parameters (`:nth-child()`, `:lang()`, ...), page url (`:target`) or require JS (`:indeterminate`), have been excluded. See [support list](#pseudo-class-names).
 
 ## Options
 
-Options config has two properties &mdash; `include` and `exclude` &mdash; to define which psuedo class names to add. Both `include` and `exclude` can be:
+Options config has two properties &mdash; `include` and `exclude` &mdash; to define which psuedo class names to add, and which tags to add them to. Both `include.classNames` and `exclude.classNames` can be:
 
 - a string of a [class name group](#class-name-groups)
 - a string of a class name (`/^:\S+/`, from those in the `all` group)
@@ -40,14 +40,56 @@ Options config has two properties &mdash; `include` and `exclude` &mdash; to def
 
 ### Example Options Config
 
+This config adds all supported pseudo class names to all appropriate elements using their default class names.
+
 ```js
 let config = {
-    include : "all", // default is [ "all" ]
-    exclude : [      // default is []
-        "onlyChild",
-        ":root",
-        ":read-only"
-    ]
+    include : {
+        classNames : "all" // all group
+    }
+};
+```
+
+Here's something more complex, adding only two class names but only to elements that aren't `div`, `table` or `form.
+
+```js
+let config = {
+    include : {
+        classNames : [ ":first-child", ":last-child" ]
+    },
+    exclude : {
+        tags : [
+            "div", "table", "form"
+        ]
+    }
+};
+```
+
+And here's an unrealistic and irresponsible config showing more options.
+
+```js
+let config = {
+    include : {
+        classNames : [
+            "all", // include the "all" group using default class names
+            ":first-child" : "fc", // custom class name; below using function
+            "form" : (className) => className.replace(":", "")
+        ],
+        tags : [
+            "div",
+            "p",
+            "span"
+        ]
+    },
+    exclude : {
+        classNames : [
+            "onlyChild",
+            ":root",
+            ":read-only"
+        ],
+        tags : [
+            "div"
+        ]
 }
 ```
 
