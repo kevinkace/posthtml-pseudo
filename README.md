@@ -90,6 +90,7 @@ let config = {
         tags : [
             "div"
         ]
+    }
 }
 ```
 
