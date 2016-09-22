@@ -64,5 +64,32 @@ describe("/lib", () => {
                     assert.equal(result.html, fixtures.excludeAll.expected);
                 })
         );
+
+        it("should process all the things", () =>
+            posthtml()
+                .use(pseudo({
+                    include : {
+                        classNames : [
+                            "form",
+                            {
+                                firstLastOnly : function(className) {
+                                    return className.replace(/:|-/g, "") + "-bookend";
+                                }
+                            },
+                            {
+                                ":empty" : "hidden"
+                            }
+                        ]
+                    },
+                    exclude : {
+                        classNames : [ "readWrite" ],
+                        tags       : [ "div" ]
+                    }
+                }))
+                .process(fixtures.allTheThings.input)
+                .then((result) => {
+                    assert.equal(result.html, fixtures.allTheThings.expected);
+                })
+        );
     });
 });
