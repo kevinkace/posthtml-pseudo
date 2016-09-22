@@ -74,7 +74,7 @@ describe("/lib", () => {
                 .use(pseudo({
                     include : {
                         classNames : [ "firstLastOnly" ],
-                        tags       : [ "p", "input",]
+                        tags       : [ "p", "input" ]
                     },
                     exclude : {
                         tags : [ "p", "div" ]
