@@ -13,7 +13,11 @@ describe("/lib", () => {
         // :default
         it("should add :default", () =>
             posthtml()
-                .use(pseudo({ include : ":default" }))
+                .use(pseudo({
+                    include : {
+                        classNames : [ ":default" ]
+                    }
+                }))
                 .process(fixtures[":default"].input)
                 .then((result) => {
                     assert.equal(result.html, fixtures[":default"].expected);
@@ -23,7 +27,11 @@ describe("/lib", () => {
         // :disabled
         it("should add :disabled", () =>
             posthtml()
-                .use(pseudo({ include : ":disabled" }))
+                .use(pseudo({
+                    include : {
+                        classNames : [ ":disabled" ]
+                    }
+                }))
                 .process(fixtures[":disabled"].input)
                 .then((result) => {
                     assert.equal(result.html, fixtures[":disabled"].expected);
@@ -33,7 +41,11 @@ describe("/lib", () => {
         // :empty
         it("should add :empty", () =>
             posthtml()
-                .use(pseudo({ include : ":empty" }))
+                .use(pseudo({
+                    include : {
+                        classNames : [ ":empty" ]
+                    }
+                }))
                 .process(fixtures[":empty"].input)
                 .then((result) => {
                     assert.equal(result.html, fixtures[":empty"].expected);
@@ -43,7 +55,11 @@ describe("/lib", () => {
         // :enabled
         it("should add :enabled", () =>
             posthtml()
-                .use(pseudo({ include : ":enabled" }))
+                .use(pseudo({
+                    include : {
+                        classNames : [ ":enabled" ]
+                    }
+                }))
                 .process(fixtures[":enabled"].input)
                 .then((result) => {
                     assert.equal(result.html, fixtures[":enabled"].expected);
@@ -53,7 +69,11 @@ describe("/lib", () => {
         // :first-child
         it("should add :first-child", () =>
             posthtml()
-                .use(pseudo({ include : ":first-child" }))
+                .use(pseudo({
+                    include : {
+                        classNames : [ ":first-child" ]
+                    }
+                }))
                 .process(fixtures[":first-child"].input)
                 .then((result) => {
                     assert.equal(result.html, fixtures[":first-child"].expected);
@@ -63,7 +83,11 @@ describe("/lib", () => {
         // :first-of-type
         it("should add :first-of-type", () =>
             posthtml()
-                .use(pseudo({ include : ":first-of-type" }))
+                .use(pseudo({
+                    include : {
+                        classNames : [ ":first-of-type" ]
+                    }
+                }))
                 .process(fixtures[":first-of-type"].input)
                 .then((result) => {
                     assert.equal(result.html, fixtures[":first-of-type"].expected);
@@ -73,7 +97,11 @@ describe("/lib", () => {
         // :last-child
         it("should add :last-child", () =>
             posthtml()
-                .use(pseudo({ include : ":last-child" }))
+                .use(pseudo({
+                    include : {
+                        classNames : [ ":last-child" ]
+                    }
+                }))
                 .process(fixtures[":last-child"].input)
                 .then((result) => {
                     assert.equal(result.html, fixtures[":last-child"].expected);
@@ -83,7 +111,11 @@ describe("/lib", () => {
         // :last-of-type
         it("should add :last-of-type", () =>
             posthtml()
-                .use(pseudo({ include : ":last-of-type" }))
+                .use(pseudo({
+                    include : {
+                        classNames : [ ":last-of-type" ]
+                    }
+                }))
                 .process(fixtures[":last-of-type"].input)
                 .then((result) => {
                     assert.equal(result.html, fixtures[":last-of-type"].expected);
@@ -93,7 +125,11 @@ describe("/lib", () => {
         // :only-child
         it("should add :only-child", () =>
             posthtml()
-                .use(pseudo({ include : ":only-child" }))
+                .use(pseudo({
+                    include : {
+                        classNames : [ ":only-child" ]
+                    }
+                }))
                 .process(fixtures[":only-child"].input)
                 .then((result) => {
                     assert.equal(result.html, fixtures[":only-child"].expected);
@@ -103,7 +139,11 @@ describe("/lib", () => {
         // :only-of-type
         it("should add :only-of-type", () =>
             posthtml()
-                .use(pseudo({ include : ":only-of-type" }))
+                .use(pseudo({
+                    include : {
+                        classNames : [ ":only-of-type" ]
+                    }
+                }))
                 .process(fixtures[":only-of-type"].input)
                 .then((result) => {
                     assert.equal(result.html, fixtures[":only-of-type"].expected);
@@ -113,7 +153,11 @@ describe("/lib", () => {
         // :optional
         it("should add :optional", () =>
             posthtml()
-                .use(pseudo({ include : ":optional" }))
+                .use(pseudo({
+                    include : {
+                        classNames : [ ":optional" ]
+                    }
+                }))
                 .process(fixtures[":optional"].input)
                 .then((result) => {
                     assert.equal(result.html, fixtures[":optional"].expected);
@@ -123,7 +167,11 @@ describe("/lib", () => {
         // :read-only
         it("should add :read-only", () =>
             posthtml()
-                .use(pseudo({ include : ":read-only" }))
+                .use(pseudo({
+                    include : {
+                        classNames : [ ":read-only" ]
+                    }
+                }))
                 .process(fixtures[":read-only"].input)
                 .then((result) => {
                     assert.equal(result.html, fixtures[":read-only"].expected);
@@ -133,7 +181,11 @@ describe("/lib", () => {
         // :read-write
         it("should add :read-write", () =>
             posthtml()
-                .use(pseudo({ include : ":read-write" }))
+                .use(pseudo({
+                    include : {
+                        classNames : [ ":read-write" ]
+                    }
+                }))
                 .process(fixtures[":read-write"].input)
                 .then((result) => {
                     assert.equal(result.html, fixtures[":read-write"].expected);
@@ -143,7 +195,11 @@ describe("/lib", () => {
         // :required
         it("should add :required", () =>
             posthtml()
-                .use(pseudo({ include : ":required" }))
+                .use(pseudo({
+                    include : {
+                        classNames : [ ":required" ]
+                    }
+                }))
                 .process(fixtures[":required"].input)
                 .then((result) => {
                     assert.equal(result.html, fixtures[":required"].expected);
@@ -153,7 +209,11 @@ describe("/lib", () => {
         // :root
         it("should add :root", () =>
             posthtml()
-                .use(pseudo({ include : ":root" }))
+                .use(pseudo({
+                    include : {
+                        classNames : [ ":root" ]
+                    }
+                }))
                 .process(fixtures[":root"].input)
                 .then((result) => {
                     assert.equal(result.html, fixtures[":root"].expected);

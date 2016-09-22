@@ -39,8 +39,12 @@ describe("/lib", () => {
         it("should process include and exclude", () =>
             posthtml()
                 .use(pseudo({
-                    include : "firstLastOnly",
-                    exclude : ":last-child"
+                    include : {
+                        classNames : "firstLastOnly"
+                    },
+                    exclude : {
+                        classNames : ":last-child"
+                    }
                 }))
                 .process(fixtures.exclude.input)
                 .then((result) => {
@@ -51,11 +55,40 @@ describe("/lib", () => {
         it("should process excluding group all", () =>
             posthtml()
                 .use(pseudo({
-                    exclude : "all"
+                    exclude : {
+                        classNames : "all"
+                    }
                 }))
                 .process(fixtures.excludeAll.input)
                 .then((result) => {
                     assert.equal(result.html, fixtures.excludeAll.expected);
+                })
+        );
+
+        it("should process all the things", () =>
+            posthtml()
+                .use(pseudo({
+                    include : {
+                        classNames : [
+                            "form",
+                            {
+                                firstLastOnly : function(className) {
+                                    return className.replace(/:|-/g, "") + "-bookend";
+                                }
+                            },
+                            {
+                                ":empty" : "hidden"
+                            }
+                        ]
+                    },
+                    exclude : {
+                        classNames : [ "readWrite" ],
+                        tags       : [ "div" ]
+                    }
+                }))
+                .process(fixtures.allTheThings.input)
+                .then((result) => {
+                    assert.equal(result.html, fixtures.allTheThings.expected);
                 })
         );
     });

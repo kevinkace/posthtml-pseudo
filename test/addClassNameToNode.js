@@ -18,19 +18,19 @@ describe("/lib", () => {
         });
 
         it("should add a class name to the end of a node with a class attr", () => {
-            assert.deepEqual(addClassNameToNode(fixtures.endClass.input, ":test"), fixtures.endClass.expected);
+            assert.deepEqual(addClassNameToNode(fixtures.endClass.input), fixtures.endClass.expected);
         });
 
         it("should not duplicate a class name", () => {
-            assert.deepEqual(addClassNameToNode(fixtures.noDuplicate.input, ":test"), fixtures.noDuplicate.expected);
+            assert.deepEqual(addClassNameToNode(fixtures.noDuplicate.input), fixtures.noDuplicate.expected);
         });
 
         it("should not duplicate a class name 2", () => {
-            assert.deepEqual(addClassNameToNode(fixtures.noDuplicate2.input, ":test"), fixtures.noDuplicate2.expected);
+            assert.deepEqual(addClassNameToNode(fixtures.noDuplicate2.input), fixtures.noDuplicate2.expected);
         });
 
         it("should not duplicate a class name 3", () => {
-            assert.deepEqual(addClassNameToNode(fixtures.noDuplicate3.input, ":test"), fixtures.noDuplicate3.expected);
+            assert.deepEqual(addClassNameToNode(fixtures.noDuplicate3.input), fixtures.noDuplicate3.expected);
         });
     });
 });

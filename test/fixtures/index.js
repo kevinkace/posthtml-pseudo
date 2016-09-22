@@ -27,6 +27,10 @@ module.exports = {
         input    : require("./excludeAll.html"),
         expected : require("./excludeAll.expected.html")
     },
+    allTheThings : {
+        input    : require("./allTheThings.html"),
+        expected : require("./allTheThings.expected.html")
+    },
     classNames : {
         ":default" : {
             input    : require("./classNames/default.html"),
@@ -139,6 +143,28 @@ module.exports = {
         class_function : {
             input    : require("./customClassNames/class_function"),
             expected : require("./customClassNames/class_function.expected")
+        }
+    },
+    filters : {
+        group_include_tag : {
+            input    : require("./filters/group_include_tag.html"),
+            expected : require("./filters/group_include_tag.expected.html")
+        },
+        group_include_tags : {
+            input    : require("./filters/group_include_tags.html"),
+            expected : require("./filters/group_include_tags.expected.html")
+        },
+        group_exclude_tag : {
+            input    : require("./filters/group_exclude_tag.html"),
+            expected : require("./filters/group_exclude_tag.expected.html")
+        },
+        group_exclude_tags : {
+            input    : require("./filters/group_exclude_tags.html"),
+            expected : require("./filters/group_exclude_tags.expected.html")
+        },
+        group_include_exclude_tags : {
+            input    : require("./filters/group_include_exclude_tags.html"),
+            expected : require("./filters/group_include_exclude_tags.expected.html")
         }
     }
 };
