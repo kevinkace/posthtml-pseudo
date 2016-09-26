@@ -30,7 +30,7 @@
     "css"
   ],
   "license": "MIT",
-  "main": "lib",
+  "main": "index.js",
   "repository": "kevinkace/posthtml-pseudo",
   "scripts": {
     "test": "npm run lint && mocha",
