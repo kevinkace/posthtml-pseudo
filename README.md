@@ -50,7 +50,7 @@ let config = {
 };
 ```
 
-Here's something more complex, adding only two class names but only to elements that aren't `div`, `table` or `form.
+Here's something more complex, adding only two class names but only to elements that aren't `div`, `table` or `form`.
 
 ```js
 let config = {
