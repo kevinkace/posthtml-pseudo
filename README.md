@@ -72,8 +72,8 @@ let config = {
     include : {
         classNames : [
             "all", // include the "all" group using default class names
-            ":first-child" : "fc", // custom class name; below using function
-            "form" : (className) => className.replace(":", "")
+            { ":first-child" : "fc" }, // custom class name; below using function
+            { "form" : (className) => className.replace(":", "") }
         ],
         tags : [
             "div",
