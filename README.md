@@ -1,5 +1,7 @@
 # posthtml-pseudo
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kevinkace/posthtml-pseudo.svg)](https://greenkeeper.io/)
+
 [![Build][build-badge]][build]
 [![Coverage][coverage-badge]][coverage]
 ![super awesome][super-badge]

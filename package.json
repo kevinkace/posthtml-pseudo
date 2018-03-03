@@ -6,16 +6,16 @@
   "bugs": "https://github.com/kevinkace/posthtml-pseudo/issues",
   "dependencies": {
     "lodash": "^4.15.0",
-    "posthtml": "^0.9.0"
+    "posthtml": "^0.11.3"
   },
   "devDependencies": {
     "assert": "^1.4.1",
-    "coveralls": "^2.11.12",
-    "eslint": "^3.4.0",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.18.2",
     "eslint-plugin-promise": "^3.1.0",
     "eslint-plugin-standard": "^3.0.1",
     "istanbul": "^0.4.5",
-    "mocha": "^3.0.0",
+    "mocha": "^5.0.1",
     "publish-please": "^2.2.0"
   },
   "engines": {
