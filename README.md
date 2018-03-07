@@ -30,7 +30,9 @@ After:
 </html>
 ```
 
-**Note on supported classes**: Pseudo classes dependent on input values (`:valid`, `:invalid`, ...), browser history (`:visted`, `:link`, ...), interaction (`:hover`, `:focus:`), parameters (`:nth-child()`, `:lang()`, ...), page url (`:target`) or require JS (`:indeterminate`), have been excluded. See [support list](#pseudo-class-names).
+:point_right: Check out [postcss-pseudo-classes](https://github.com/giuseppeg/postcss-pseudo-classes) for the other side of the equation.
+
+:pencil: **Note on supported classes**: Pseudo classes dependent on input values (`:valid`, `:invalid`, ...), browser history (`:visted`, `:link`, ...), interaction (`:hover`, `:focus:`), parameters (`:nth-child()`, `:lang()`, ...), page url (`:target`) or require JS (`:indeterminate`), have been excluded. See [support list](#pseudo-class-names).
 
 ## Options
 
