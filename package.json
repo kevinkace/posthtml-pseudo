@@ -1,7 +1,7 @@
 {
   "name": "posthtml-pseudo",
   "description": "Adds pseudo class names to elements.",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "author": "Kevin A. Cameron",
   "bugs": "https://github.com/kevinkace/posthtml-pseudo/issues",
   "dependencies": {
