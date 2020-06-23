@@ -6,7 +6,7 @@
   "bugs": "https://github.com/kevinkace/posthtml-pseudo/issues",
   "dependencies": {
     "lodash": "^4.17.15",
-    "posthtml": "^0.12.0"
+    "posthtml": "^0.13.1"
   },
   "devDependencies": {
     "assert": "^2.0.0",
