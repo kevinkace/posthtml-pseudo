@@ -5,7 +5,7 @@
   "author": "Kevin A. Cameron",
   "bugs": "https://github.com/kevinkace/posthtml-pseudo/issues",
   "dependencies": {
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.20",
     "posthtml": "^0.13.3"
   },
   "devDependencies": {
