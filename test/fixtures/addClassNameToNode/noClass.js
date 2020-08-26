@@ -14,7 +14,7 @@ module.exports = {
                     class : "animals__cat",
                     style : "background: url(cat.png)"
                 },
-                content : ["Cat"]
+                content : [ "Cat" ]
             },
             "\n"
         ],
@@ -34,7 +34,7 @@ module.exports = {
                     class : "animals__cat",
                     style : "background: url(cat.png)"
                 },
-                content : ["Cat"]
+                content : [ "Cat" ]
             },
             "\n"
         ]

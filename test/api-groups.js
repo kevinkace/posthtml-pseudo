@@ -1,11 +1,11 @@
 "use strict";
 
-const pseudo = require("../"),
-    posthtml = require("posthtml"),
+const pseudo = require("../");
+const posthtml = require("posthtml");
 
-    fixtures = require("./fixtures").groups,
+const fixtures = require("./fixtures").groups;
 
-    assert = require("assert");
+const assert = require("assert");
 
 
 describe("/lib", () => {

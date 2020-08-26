@@ -1,11 +1,11 @@
 "use strict";
 
-const pseudo = require("../"),
-    posthtml = require("posthtml"),
+const pseudo = require("../");
+const posthtml = require("posthtml");
 
-    fixtures = require("./fixtures").customClassNames,
+const fixtures = require("./fixtures").customClassNames;
 
-    assert = require("assert");
+const assert = require("assert");
 
 
 describe("/lib", () => {
@@ -27,7 +27,7 @@ describe("/lib", () => {
             posthtml()
                 .use(pseudo({
                     include : {
-                        classNames : [{ "firstLastOnly" : "flo" }]
+                        classNames : [{ firstLastOnly : "flo" }]
                     }
                 }))
                 .process(fixtures.group_string.input)
@@ -58,9 +58,7 @@ describe("/lib", () => {
                 .use(pseudo({
                     include : {
                         classNames : [{
-                            "firstLastOnly" : (className) => {
-                                return className.replace(/:|-/g, "");
-                            }
+                            firstLastOnly : (className) => className.replace(/:|-/g, "")
                         }]
                     }
                 }))

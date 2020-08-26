@@ -1,17 +1,17 @@
 "use strict";
 
-const removeClassNames = require("../lib/removeClassNames"),
+const removeClassNames = require("../lib/removeClassNames");
 
-    groups = require("../lib/groups"),
+const groups = require("../lib/groups");
 
-    classNamer = require("../lib/classNamer"),
+const classNamer = require("../lib/classNamer");
 
-    reduceGroup = require("./reduceGroup"),
+const reduceGroup = require("./reduceGroup");
 
-    assert = require("assert"),
+const assert = require("assert");
 
-    forEach = require("lodash/forEach"),
-    concat  = require("lodash/concat");
+const forEach = require("lodash/forEach");
+const concat  = require("lodash/concat");
 
 
 function filteredGroups(excludeClasses) {
@@ -22,7 +22,7 @@ function filteredGroups(excludeClasses) {
 
             return acc;
         }, {});
-};
+}
 
 
 describe("/lib", () => {

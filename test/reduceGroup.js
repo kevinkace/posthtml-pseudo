@@ -1,8 +1,8 @@
 "use strict";
 
-const groups = require("../lib/groups"),
+const groups = require("../lib/groups");
 
-    classNamer = require("../lib/classNamer");
+const classNamer = require("../lib/classNamer");
 
 module.exports = function(groupName, base) {
     base = base || {};

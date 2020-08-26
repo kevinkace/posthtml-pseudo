@@ -1,17 +1,17 @@
 "use strict";
 
-const addClassNames = require("../lib/addClassNames"),
+const addClassNames = require("../lib/addClassNames");
 
-    groups = require("../lib/groups"),
+const groups = require("../lib/groups");
 
-    classNamer = require("../lib/classNamer"),
+const classNamer = require("../lib/classNamer");
 
-    reduceGroup = require("./reduceGroup"),
+const reduceGroup = require("./reduceGroup");
 
-    assert = require("assert"),
+const assert = require("assert");
 
-    forEach = require("lodash/forEach"),
-    merge   = require("lodash/merge");
+const forEach = require("lodash/forEach");
+const merge   = require("lodash/merge");
 
 
 describe("/lib", () => {

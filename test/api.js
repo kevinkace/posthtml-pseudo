@@ -1,11 +1,11 @@
 "use strict";
 
-const pseudo = require("../"),
-    posthtml = require("posthtml"),
+const pseudo = require("../");
+const posthtml = require("posthtml");
 
-    fixtures = require("./fixtures"),
+const fixtures = require("./fixtures");
 
-    assert = require("assert");
+const assert = require("assert");
 
 
 describe("/lib", () => {
@@ -73,7 +73,7 @@ describe("/lib", () => {
                             "form",
                             {
                                 firstLastOnly : function(className) {
-                                    return className.replace(/:|-/g, "") + "-bookend";
+                                    return `${className.replace(/:|-/g, "")}-bookend`;
                                 }
                             },
                             {
