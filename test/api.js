@@ -14,7 +14,7 @@ describe("/lib", () => {
             posthtml()
                 .process(fixtures.basic.input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.basic.expected);
+                    assert.strictEqual(result.html, fixtures.basic.expected);
                 })
         );
 
@@ -23,7 +23,7 @@ describe("/lib", () => {
                 .use(pseudo())
                 .process(fixtures.fragment.input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.fragment.expected);
+                    assert.strictEqual(result.html, fixtures.fragment.expected);
                 })
         );
 
@@ -32,7 +32,7 @@ describe("/lib", () => {
                 .use(pseudo())
                 .process(fixtures.emptyHtml.input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.emptyHtml.expected);
+                    assert.strictEqual(result.html, fixtures.emptyHtml.expected);
                 })
         );
 
@@ -48,7 +48,7 @@ describe("/lib", () => {
                 }))
                 .process(fixtures.exclude.input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.exclude.expected);
+                    assert.strictEqual(result.html, fixtures.exclude.expected);
                 })
         );
 
@@ -61,7 +61,7 @@ describe("/lib", () => {
                 }))
                 .process(fixtures.excludeAll.input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.excludeAll.expected);
+                    assert.strictEqual(result.html, fixtures.excludeAll.expected);
                 })
         );
 
@@ -88,7 +88,7 @@ describe("/lib", () => {
                 }))
                 .process(fixtures.allTheThings.input)
                 .then((result) => {
-                    assert.equal(result.html, fixtures.allTheThings.expected);
+                    assert.strictEqual(result.html, fixtures.allTheThings.expected);
                 })
         );
     });
