@@ -195,8 +195,8 @@ List of supported and unsupported pseudo class names. Checkboxes track implement
 
 \* Hope to add these, but require some thinking due to input parameters.
 
-[build]: https://travis-ci.org/kevinkace/posthtml-pseudo
-[build-badge]: https://travis-ci.org/kevinkace/posthtml-pseudo.svg?branch=master
+[build]: https://github.com/kevinkace/posthtml-pseudo/actions/workflows/npm-publish.yml
+[build-badge]: https://github.com/kevinkace/posthtml-pseudo/actions/workflows/npm-publish.yml/badge.svg
 
 [coverage]: https://coveralls.io/github/kevinkace/posthtml-pseudo
 [coverage-badge]: https://coveralls.io/repos/github/kevinkace/posthtml-pseudo/badge.svg
