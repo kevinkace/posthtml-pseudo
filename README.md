@@ -2,7 +2,6 @@
 
 [![Build][build-badge]][build]
 [![Coverage][coverage-badge]][coverage]
-[![Greenkeeper badge](https://badges.greenkeeper.io/kevinkace/posthtml-pseudo.svg)](https://greenkeeper.io/)
 ![super awesome][super-badge]
 
 A [PostHTML](https://github.com/posthtml/posthtml) plugin to add [pseudo classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) to elements within `<body>`, eg `:first-child`/`:last-child`.
