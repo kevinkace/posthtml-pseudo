@@ -1,7 +1,7 @@
 {
   "name": "posthtml-pseudo",
   "description": "Adds pseudo class names to elements.",
-  "version": "0.6.12",
+  "version": "0.6.13",
   "author": "Kevin A. Cameron",
   "bugs": "https://github.com/kevinkace/posthtml-pseudo/issues",
   "dependencies": {
@@ -34,11 +34,9 @@
   "main": "index.js",
   "repository": "kevinkace/posthtml-pseudo",
   "scripts": {
-    "test": "npm run lint && mocha",
+    "test": "mocha",
     "lint": "eslint .",
     "coverage": "istanbul cover --print both ./node_modules/mocha/bin/_mocha",
-    "coveralls": "cat ./coverage/lcov.info | \"./node_modules/.bin/coveralls\"",
-    "publish-please": "publish-please",
-    "prepublish": "publish-please guard"
+    "coveralls": "cat ./coverage/lcov.info | \"./node_modules/.bin/coveralls\""
   }
 }
